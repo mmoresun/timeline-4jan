@@ -1,0 +1,12 @@
+.timeline__main {
+    display: flex;    
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    border: 1px blue dashed;
+    margin: 20px;
+    justify-content: left;
+    align-items: center;
+    height: 20px;
+    overflow: hidden;
+}
