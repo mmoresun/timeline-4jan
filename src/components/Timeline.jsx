@@ -2,17 +2,17 @@ import React from "react";
 
 const Timeline = ({ params }) => {
 
-    let calcError = false;
+    let calcError = false;    
 
     const calcPixAmount = (timeStart, timeEnd, timeEvent, width) => {
 
         try {
-            if (+timeStart < +timeEvent && +timeEvent < +timeEnd) {
-                return Math.round((+timeEvent - +timeStart) / (+timeEnd - +timeStart) * +width);
+            if (timeStart < timeEvent && timeEvent <= timeEnd) {
+                return Math.round((timeEvent - timeStart) / (timeEnd - timeStart) * width);
             }
             throw new Error("Calculation failed");
         } catch (error) {
-            calcError = true;
+            calcError = true;            
             console.log(error.message);
         }
     };

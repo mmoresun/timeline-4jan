@@ -6,28 +6,28 @@ const Inputs = ({ params, setParams }) => {
     const startInputHandler = (event) => {
         setParams({
             ...params,
-            startTime: event.target.value
+            startTime: +event.target.value
         });
     };
 
     const endInputHandler = (event) => {
         setParams({
             ...params,
-            endTime: event.target.value
+            endTime: +event.target.value
         });
     };
 
     const eventInputHandler = (event) => {
         setParams({
             ...params,
-            eventTime: event.target.value
+            eventTime: +event.target.value
         });
     };
 
     const widthInputHandler = (event) => {
         setParams({
             ...params,
-            width: event.target.value
+            width: +event.target.value
         });        
     };
 
